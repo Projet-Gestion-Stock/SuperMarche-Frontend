@@ -1,0 +1,122 @@
+:root {
+  --header-height: 70px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: var(--sidebar-width);
+  right: 0;
+  height: var(--header-height);
+  background-color: var(--card);
+
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
+.header__content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
+  padding-left: 1.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.header__role {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header__user-info {
+  display: flex;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.header__theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text);
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+  flex-shrink: 0;
+}
+
+.header__theme-toggle:hover {
+  background-color: var(--sidebar-hover-bg);
+}
+
+.header__logout {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  flex-shrink: 0;
+}
+
+.header__logout:hover {
+  background-color: var(--primary-dark);
+}
+
+.logout-icon {
+  margin-right: 0.25rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header {
+    left: 0;
+    padding: 0 1rem;
+  }
+  
+  .header__title {
+    font-size: 1.1rem;
+    max-width: 150px;
+    margin-left: 1.5rem;
+  }
+  
+  .header__user-info {
+    display: none;
+  }
+  
+  .header__logout span {
+    display: none;
+  }
+  
+  .header__logout {
+    padding: 0.5rem;
+    border-radius: 50%;
+  }
+}

@@ -1,0 +1,426 @@
+/* Main container - version compacte */
+.parametre-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background-color: var(--background);
+  min-height: 100vh;
+}
+
+/* Section styling - plus compact */
+.parametre-section {
+  background: var(--card);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+}
+
+/* Titres plus légers */
+.section-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  color: var(--text);
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.section-title::before {
+  content: '';
+  display: block;
+  width: 5px;
+  height: 1.25rem;
+  background: var(--primary);
+  border-radius: 3px;
+}
+
+/* Ajoutez ces nouvelles règles */
+.horaire-input-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.horaire-input {
+  flex: 1;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.horaire-separator {
+  color: var(--text-secondary);
+}
+
+/* Form styling - plus serré */
+.parametre-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.form-control {
+  padding: 0.75rem;
+  background-color: var(--input-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary);
+  background-color: var(--input-focus-bg);
+  box-shadow: 0 0 0 2px rgba(47, 128, 237, 0.1);
+}
+
+textarea.form-control {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Logo section - taille réduite */
+.logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  grid-column: 1 / -1;
+}
+
+.logo-preview {
+  width: 140px;
+  height: 140px;
+  border-radius: 8px;
+  border: 1px dashed var(--border);
+  background-color: var(--input-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.logo-preview img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.logo-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* Réduire la hauteur du textarea */
+.compact-textarea {
+  min-height: 80px !important;  /* Au lieu de 120px */
+  max-height: 120px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.hidden-card {
+  display: none;
+}
+
+/* Opening hours - version compacte */
+.horaires-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 1rem;
+}
+
+
+/* Carte pour chaque jour */
+.jour-horaire {
+  display: flex;
+  flex-direction: column;
+  gap: 0.95rem;
+  padding: 1rem;
+  background: var(--input-bg);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+/* Groupe de saisie des horaires */
+.horaire-input-group {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.horaire-input {
+  width: 90%;
+  padding: 0.65rem 0.75rem;
+  background: var(--input-bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  text-align: center;
+  font-family: monospace;
+}
+
+.horaire-separator {
+  color: var(--text-secondary);
+  text-align: center;
+  font-size: 0.9rem;
+  margin-left: 7px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .horaires-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .horaire-input-group {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  
+  .horaire-separator {
+    display: none;
+  }
+}
+
+.jour-horaire {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: var(--input-bg);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.jour-title {
+  font-weight: 600;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+/* Buttons - version compacte */
+.btn {
+  padding: 0.7rem 1.25rem;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-danger {
+  background: var(--error);
+  color: white;
+}
+
+.btn-secondary {
+  background: var(--input-bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+/* Save buttons - plus compact */
+.save-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+/* Status indicator */
+.status-indicator {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.status-open {
+  background: var(--success);
+}
+
+.status-closed {
+  background: var(--error);
+}
+
+/* Onglets */
+.tabs-container {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.tab {
+  padding: 0.6rem 1.25rem;
+  font-size: 0.95rem;
+  border-radius: 6px 6px 0 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tab.active {
+  color: var(--primary);
+  background-color: var(--input-focus-bg);
+  border: 1px solid var(--border);
+  border-bottom-color: var(--card);
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Vue lecture seule - version compacte */
+.info-display {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.info-row {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.info-label {
+  font-weight: 500;
+  color: var(--text-secondary);
+  min-width: 120px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.info-value {
+  flex: 1;
+  font-size: 0.95rem;
+}
+
+.info-value.empty {
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+/* Logo en mode visualisation */
+.logo-display {
+  width: 100px;
+  height: 100px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+
+/* Horaires en mode visualisation */
+.horaires-display {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.75rem;
+}
+
+.horaire-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem;
+  font-size: 0.9rem;
+  background: var(--input-bg);
+  border-radius: 5px;
+}
+
+.horaire-jour {
+  font-weight: 500;
+}
+
+.horaire-heures {
+  font-family: monospace;
+}
+
+/* Status display compact */
+.status-display {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background: var(--input-bg);
+  border-radius: 6px;
+  border-left: 3px solid var(--success);
+  font-size: 0.9rem;
+}
+
+.status-display p {
+  margin: 0.25rem 0;
+}
+
+.espace{
+    margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .parametre-container {
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  .parametre-section {
+    padding: 1.25rem;
+  }
+  
+  .parametre-form {
+    grid-template-columns: 1fr;
+  }
+  
+  .horaires-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .info-row {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .info-label {
+    min-width: auto;
+  }
+  
+  .logo-actions {
+    flex-direction: column;
+  }
+  
+  .logo-actions .btn {
+    width: 100%;
+  }
+}
+

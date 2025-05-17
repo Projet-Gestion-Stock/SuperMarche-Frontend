@@ -1,0 +1,279 @@
+
+/* CommandeDetailModal.css */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+  backdrop-filter: blur(4px);
+}
+
+.modal-content {
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: var(--transition);
+}
+
+.modal-close:hover {
+  color: var(--primary);
+  transform: scale(1.1);
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: var(--primary);
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.detail-section {
+  background: var(--input-bg);
+  padding: 1.2rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.detail-section-paiement {
+  background: var(--input-bg);
+  padding: 1.2rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  width: 92%;
+}
+
+.detail-section h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: var(--text);
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.detail-section p {
+  margin: 0.8rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail-section p strong {
+  font-weight: 500;
+  color: var(--text);
+}
+
+.detail-section p span:first-child {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.detail-section p span:last-child {
+  text-align: right;
+}
+
+.full-width {
+  grid-column: span 2;
+}
+
+.produits-list {
+  margin-top: 1rem;
+}
+
+.produit-item {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 1rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--border);
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.produit-item:last-child {
+  border-bottom: none;
+}
+
+.produit-nom {
+  font-weight: 500;
+  color: var(--text);
+}
+
+.produit-quantite,
+.produit-prix,
+.produit-total {
+  text-align: right;
+}
+
+.produit-total {
+  font-weight: 500;
+  color: var(--primary);
+}
+
+.status-badge {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.status-badge.pending {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--error);
+}
+
+.status-badge.preparing {
+  background: rgba(251, 191, 36, 0.1);
+  color: var(--warning);
+}
+
+.status-badge.delivered {
+  background: rgba(34, 197, 94, 0.1);
+  color: var(--success);
+}
+
+.status-badge.cancelled {
+  background: rgba(107, 114, 128, 0.1);
+  color: var(--text-secondary);
+}
+
+.modal-actions {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.btn-pdf {
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+  background: rgba(34, 197, 94, 0.1);
+  color: var(--success);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-print {
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+  background: rgba(197, 159, 34, 0.1);
+  color: var(--warning-hover);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-pdf:hover {
+  background: var(--success);
+  color: white;
+}
+
+.btn-print:hover {
+  background: var(--warning-hover);
+  color: white;
+}
+
+.loading, 
+.error, 
+.no-data {
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.error {
+  color: var(--error);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .detail-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .full-width {
+    grid-column: span 1;
+  }
+
+  .produit-item {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .modal-content {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .produit-item {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+  }
+
+  .produit-nom,
+  .produit-quantite,
+  .produit-prix,
+  .produit-total {
+    text-align: left;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+  }
+
+  .btn-pdf .btn-print {
+    width: 100%;
+    justify-content: center;
+  }
+}

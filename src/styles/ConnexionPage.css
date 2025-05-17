@@ -1,0 +1,185 @@
+.auth-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    z-index: 999;
+    box-sizing: border-box; /* Ajout important */
+  }
+  
+  .auth-card {
+    background-color: var(--card);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+    width: 90%;
+    max-width: 400px;
+    min-width: 280px; /* Largeur minimale */
+    text-align: center;
+    color: var(--text);
+    margin: auto; /* Centrage vertical */
+    transform: translateY(-5%); /* Ajustement visuel */
+    max-height: 90vh; /* Limite la hauteur */
+  }
+  
+  .auth-branding {
+    margin-bottom: 2rem;
+  }
+  
+  .auth-logo {
+    font-size: 2rem;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .connexion-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 1.5rem;
+    border-radius: 50%;
+  }
+  
+  .auth-branding h1 {
+    font-size: clamp(1.2rem, 4vw, 1.5rem); /* Taille responsive */
+    margin-bottom: 0.5rem;
+  }
+  
+  .auth-subtitle {
+    font-size: clamp(0.85rem, 3vw, 1rem); /* Taille responsive */
+    color: var(--text-secondary);
+  }
+  
+  .auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  
+  .input-group {
+    position: relative;
+    width: 100%;
+  }
+  
+  .input-icon {
+    position: absolute;
+    top: 50%;
+    left: 0.75rem;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+  }
+  
+  .auth-input {
+    width: 100%;
+    padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-size: clamp(0.9rem, 3vw, 1rem); /* Taille responsive */
+    background-color: var(--input-bg);
+    box-sizing: border-box; /* Important pour le responsive */
+  }
+  
+  .auth-input:focus {
+    outline: none;
+    border-color: var(--primary);
+    background-color: var(--input-focus-bg);
+  }
+  
+  .auth-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    color: white;
+    padding: 0.75rem;
+    font-size: clamp(0.95rem, 3vw, 1rem); /* Taille responsive */
+    border: none;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 100%;
+  }
+  
+  .auth-button:hover:not(:disabled) {
+    background: var(--primary-hover);
+  }
+  
+  .auth-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  .button-icon {
+    margin-right: 0.5rem;
+    font-size: clamp(1rem, 3vw, 1.1rem); /* Taille responsive */
+  }
+  
+  /* Media Queries pour différents appareils */
+  
+  /* Tablettes */
+  @media (max-width: 768px) {
+    .auth-card {
+      padding: 1.5rem;
+    }
+    
+    .connexion-logo {
+      width: 90px;
+      height: 90px;
+    }
+  }
+  
+  /* Téléphones mobiles (petits écrans) */
+  @media (max-width: 480px) {
+    .auth-card {
+      padding: 1rem 1rem;
+      margin: 0 0.5rem;
+    }
+    
+    .connexion-logo {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 1rem;
+    }
+    
+    .auth-input {
+      padding: 0.65rem 0.65rem 0.65rem 2.25rem;
+    }
+    
+    .auth-button {
+      padding: 0.65rem;
+    }
+  }
+  
+  /* Très petits écrans */
+  @media (max-width: 360px) {
+    .auth-card {
+      padding: 1.25rem 0.75rem;
+    }
+    
+    .auth-branding h1 {
+      font-size: 1.1rem;
+    }
+    
+    .auth-subtitle {
+      font-size: 0.8rem;
+    }
+    
+    .auth-input {
+      font-size: 0.85rem;
+    }
+  }

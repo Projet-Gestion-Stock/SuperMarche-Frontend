@@ -1,0 +1,419 @@
+.vue-densemble-container {
+  padding: 20px;
+  background-color: var(--background);
+  color: var(--text);
+}
+
+.vue-densemble-container h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+
+.filtres-periode {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.filtres-periode button {
+  padding: 8px 15px;
+  border: 1px solid var(--border);
+  background-color: var(--input-bg);
+  color: var(--text);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.filtres-periode button.active {
+  background-color: var(--primary);
+  color: white;
+}
+
+.custom-filtre {
+  display: flex;
+  gap: 10px;
+}
+
+.custom-filtre input {
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background-color: var(--input-bg);
+  color: var(--text);
+}
+
+.stats-principales {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background-color: var(--card);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+.stat-card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.ventes-produit {
+  background-color: var(--card);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+.ventes-produit h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.total-produits {
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.produits-list {
+  margin-bottom: 30px;
+}
+
+.produit-item {
+  margin-bottom: 15px;
+}
+
+.produit-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.produit-nom {
+  font-weight: bold;
+}
+
+.produit-pourcentage {
+  color: var(--text-secondary);
+}
+
+.progress-bar {
+  height: 8px;
+  background-color: var(--input-bg);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--primary);
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+.top-produits-table {
+  margin-top: 30px;
+}
+
+.top-produits-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.top-produits-table th,
+.top-produits-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.top-produits-table th {
+  background-color: var(--input-bg);
+  font-weight: bold;
+}
+
+.top-produits-table tr:hover {
+  background-color: var(--input-bg);
+}
+
+.loading {
+  text-align: center;
+  padding: 50px;
+  color: var(--text-secondary);
+}
+
+.error {
+  color: var(--error);
+  padding: 20px;
+  background-color: var(--toast-error-border);
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stats-principales {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/* Styles généraux */
+.vue-densemble-container {
+  padding: 20px;
+  background-color: var(--background);
+  color: var(--text);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.vue-densemble-container h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+
+/* Filtres de période */
+.filtres-periode {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filtres-periode button {
+  padding: 8px 15px;
+  border: 1px solid var(--border);
+  background-color: var(--input-bg);
+  color: var(--text);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 0.9rem;
+}
+
+.filtres-periode button.active {
+  background-color: var(--primary);
+  color: white;
+}
+
+.custom-filtre {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.custom-filtre input {
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background-color: var(--input-bg);
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+/* Cartes statistiques */
+.stats-principales {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background-color: var(--card);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.stat-card h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  flex: 1;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--text);
+  margin: 10px 0;
+  transition: color 0.3s ease;
+}
+
+.stat-card:hover .stat-value {
+  color: var(--primary);
+}
+
+.percentage-change {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  animation: fadeIn 0.6s ease-out forwards;
+  margin-left: 10px;
+}
+
+.percentage-change.positive {
+  background-color: rgba(40, 167, 69, 0.1);
+  color: #28a745;
+}
+
+.percentage-change.negative {
+  background-color: rgba(220, 53, 69, 0.1);
+  color: #dc3545;
+}
+
+.time-indicator {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  opacity: 0.8;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Effet de bordure animée */
+.stat-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.stat-card:hover::after {
+  transform: scaleX(1);
+}
+
+/* Section Ventes par produit */
+.ventes-produit {
+  background-color: var(--card);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+  margin-top: 20px;
+  border: 1px solid var(--border);
+}
+
+.ventes-produit h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: var(--text);
+}
+
+.total-produits {
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+/* Tableau des produits */
+.top-produits-table {
+  overflow-x: auto;
+}
+
+.top-produits-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.top-produits-table th,
+.top-produits-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.top-produits-table th {
+  background-color: var(--input-bg);
+  font-weight: bold;
+  color: var(--text);
+}
+
+.top-produits-table tr:hover {
+  background-color: var(--input-bg);
+}
+
+/* États de chargement et erreur */
+.loading {
+  text-align: center;
+  padding: 50px;
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+}
+
+.error {
+  color: var(--error);
+  padding: 20px;
+  background-color: var(--toast-error-border);
+  border-radius: 8px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stats-principales {
+    grid-template-columns: 1fr;
+  }
+  
+  .filtres-periode {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .custom-filtre {
+    flex-direction: column;
+  }
+}
+
+.hidden-card {
+  display: none;
+}

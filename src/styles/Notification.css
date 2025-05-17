@@ -1,0 +1,135 @@
+/* Positions possibles */
+.toast-top-right {
+    top: 20px;
+    right: 20px;
+    bottom: auto;
+    left: auto;
+  }
+  
+  .toast-top-left {
+    top: 20px;
+    left: 20px;
+    bottom: auto;
+    right: auto;
+  }
+  
+  .toast-bottom-right {
+    bottom: 20px;
+    right: 20px;
+    top: auto;
+    left: auto;
+  }
+  
+  .toast-bottom-left {
+    bottom: 20px;
+    left: 20px;
+    top: auto;
+    right: auto;
+  }
+  
+  .toast-top-center {
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: auto;
+    right: auto;
+  }
+  
+  .toast-bottom-center {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: auto;
+    right: auto;
+  }
+  
+  /* Style de base */
+  .toast {
+    position: fixed;
+    z-index: 9999;
+    min-width: 250px;
+    max-width: 350px;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    animation: toast-in 0.3s ease-out;
+    font-family: inherit;
+  }
+  
+  .toast-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+  
+  .toast-icon {
+    font-size: 1.2em;
+    font-weight: bold;
+    flex-shrink: 0;
+  }
+  
+  .toast-message {
+    margin: 0;
+    font-size: 0.9em;
+    line-height: 1.4;
+    flex-grow: 1;
+  }
+  
+  /* Couleurs selon le type - MODIFIÉ */
+  .toast-success {
+    background-color: var(--toast-bg, var(--card));
+    color: var(--toast-success-text, var(--success));
+    border-left: 4px solid var(--toast-success-border, var(--success));
+  }
+  
+  .toast-error {
+    background-color: var(--toast-bg, var(--card));
+    color: var(--toast-error-text, var(--error));
+    border-left: 4px solid var(--toast-error-border, var(--error));
+  }
+  
+  .toast-info {
+    background-color: var(--toast-bg, var(--card));
+    color: var(--toast-info-text, var(--info));
+    border-left: 4px solid var(--toast-info-border, var(--info));
+  }
+  
+  .toast-warning {
+    background-color: var(--toast-bg, var(--card));
+    color: var(--toast-warning-text, var(--warning));
+    border-left: 4px solid var(--toast-warning-border, var(--warning));
+  }
+  
+  /* Animations */
+  @keyframes toast-in {
+    from { 
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to { 
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .toast {
+      width: 90%;
+      max-width: none;
+      left: 5%;
+      right: 5%;
+    }
+    
+    .toast-top-right,
+    .toast-top-left,
+    .toast-bottom-right,
+    .toast-bottom-left {
+      left: 5%;
+      right: 5%;
+      transform: none;
+    }
+  }

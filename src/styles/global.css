@@ -1,0 +1,49 @@
+/* Style général de la scrollbar pour tout le document */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track (arrière-plan de la scrollbar) */
+::-webkit-scrollbar-track {
+  background: var(--background);
+  border-radius: 5px;
+}
+
+/* Handle (partie mobile de la scrollbar) */
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 5px;
+  border: 2px solid var(--background);
+}
+
+/* Handle au survol */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-hover);
+}
+
+/* Style spécifique pour la scrollbar dans les modales */
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+  border: 2px solid var(--card);
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-hover);
+}
+
+/* Support pour Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--background);
+}
+
+/* Style pour Firefox - modal spécifique */
+.modal-content {
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) var(--card);
+}

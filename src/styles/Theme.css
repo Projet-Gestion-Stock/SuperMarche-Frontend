@@ -1,0 +1,78 @@
+
+:root {
+  /* Light Theme (inchangé) */
+  --primary: #2F80ED;
+  --primary-hover: #1A6ED8;
+  --secondary: #6BB9F0;
+  --secondary-hover: #3DBBEB;
+  --background: #F9FAFB;
+  --input-bg: #f9f9f9; /* Blanc ou légèrement grisé Background de champ de saisi*/
+  --input-focus-bg: #F1F5F9; /* Background de champ de saisi */
+  --text: #1F2937;
+  --card: #FFFFFF;
+  --border: #E5E7EB;
+  --warning: #F59E0B;
+  --warning-hover: #D97706;
+
+  /* Notifications */
+  --toast-bg: #ffffff;
+  --toast-success-text: #2e7d32;
+  --toast-success-border: #4caf50;
+  --toast-error-text: #c62828;
+  --toast-error-border: #f44336;
+  --toast-info-text: #1565c0;
+  --toast-info-border: #2196f3;
+  --toast-warning-text: #e65100;
+  --toast-warning-border: #ff9800;
+  }
+    
+[data-theme="dark"] {
+  /* Couleurs principales */
+  --background: #0F172A;       /* Fond bleu marine très foncé */
+  --input-bg: #334155;         /* Fond gris-bleu */
+  --input-focus-bg: #475569;  /* Fond gris-bleu au focus */
+  --card: #1E293B;            /* Cartes gris-bleu foncé */
+  --text: #FFFFFF;            /* Texte principal blanc */
+  --text-secondary: #94A3B8;  /* Texte secondaire gris-bleu */
+  --border: #64748B;          /* Bordures gris bleuté */
+    
+  /* Boutons et accents */
+  --primary: #3B82F6;         /* Bleu vif */
+  --primary-hover: #1D4ED8;   /* Bleu profond au survol */
+  --primary-gradient: linear-gradient(135deg, #3B82F6 0%, #60A5FA 100%);
+      
+  /* Couleurs fonctionnelles */
+  --success: #22C55E;         /* Vert de confirmation */
+  --error: #EF4444;           /* Rouge d'alerte */
+  --info: #38BDF8;            /* Bleu ciel informatif */
+  --warning: #FBBF24;
+  --warning-hover: #F59E0B;
+
+    
+  /* Effets visuels */
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Notifications */
+
+  --toast-bg: #2d3748;
+  --toast-success-text: #81c784;
+  --toast-success-border: #4caf50;
+  --toast-error-text: #e57373;
+  --toast-error-border: #f44336;
+  --toast-info-text: #64b5f6;
+  --toast-info-border: #2196f3;
+  --toast-warning-text: #ffb74d;
+  --toast-warning-border: #ff9800;
+}
+
+  /* Applique les couleurs à l'ensemble de l'application */
+html, body {
+  background-color: var(--background);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+  
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
