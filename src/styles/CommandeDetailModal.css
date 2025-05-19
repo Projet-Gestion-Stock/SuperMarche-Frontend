@@ -15,7 +15,7 @@
   backdrop-filter: blur(4px);
 }
 
-.modal-content {
+.modal-content { 
   background: var(--card);
   padding: 1.5rem;
   border-radius: 12px;

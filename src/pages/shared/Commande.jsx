@@ -347,7 +347,7 @@ const CommandesPage = () => {
             </div>
           ))
         )}
-      </div>
+      </div> 
 
       {/* Modal */}
       {selectedVenteId && (

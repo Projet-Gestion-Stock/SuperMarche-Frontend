@@ -345,7 +345,7 @@ export default function Inventaire() {
 
         {activeModal === 'stock' && selectedProduit && (
           <div className="modal-overlay">
-            <div className="modal stock-modal">
+            <div className="modal stock-modal"> 
               <MiseAJourStockModal 
                 produit={selectedProduit}
                 handleMiseAJourStock={handleMiseAJourStock}
