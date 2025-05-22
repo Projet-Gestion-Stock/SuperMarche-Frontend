@@ -198,8 +198,6 @@ const VueDensemble = () => {
       {/* Ventes par produit - Accessible à ADMIN et GERANT */}
       <div className="ventes-produit">
         <h2>Ventes par Produit</h2>
-        <p className="total-produits">{stats.produitsVendus} produits vendus</p>
-
         <div className="top-produits-table">
           <table>
             <thead>

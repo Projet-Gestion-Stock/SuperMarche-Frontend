@@ -33,15 +33,17 @@ export default function MiseAJourStockModal({ produit, handleMiseAJourStock, onC
           <div className="operation-toggle">
             <button
               type="button"
-              className={`toggle-btn ${operation === 'add' ? 'active' : ''}`}
+              className={`toggles-btn ${operation === 'add' ? 'active' : ''}`}
               onClick={() => setOperation('add')}
+              data-operation="add"
             >
               Ajouter
             </button>
             <button
               type="button"
-              className={`toggle-btn ${operation === 'remove' ? 'active' : ''}`}
+              className={`toggles-btn ${operation === 'remove' ? 'active' : ''}`}
               onClick={() => setOperation('remove')}
+              data-operation="remove"
             >
               Retirer
             </button>

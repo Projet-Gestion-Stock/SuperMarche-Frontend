@@ -276,7 +276,7 @@ export default function Inventaire() {
                     <td>
                       <div className="produit-info">
                         {produit.imageUrl && (
-                          <img src={produit.imageUrl} alt={produit.produit} className="produit-image" />
+                          <img src={produit.imageUrl} alt={produit.produit} className="produits-image" />
                         )}
                         <div>
                           <span className="produit-name">{produit.produit}</span>

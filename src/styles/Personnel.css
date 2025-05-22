@@ -305,7 +305,7 @@ html, body {
 }
 
 /* Modal Styles */
-.modal-overlay {
+.modals-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -319,7 +319,7 @@ html, body {
   backdrop-filter: blur(2px);
 }
 
-.modal-content {
+.modals-content {
   background: var(--card);
   border-radius: 12px;
   width: 95%;
@@ -347,7 +347,7 @@ html, body {
   color: var(--text);
 }
 
-.modal-content h2 {
+.modals-content h2 {
   margin-top: 0;
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
@@ -502,7 +502,7 @@ html, body {
     justify-content: center;
   }
   
-  .modal-content {
+  .modals-content {
     width: 85%;
     padding: 1.5rem;
   }
@@ -526,7 +526,7 @@ html, body {
     justify-content: center;
   }
 
-  .modal-content {
+  .modals-content {
     padding: 1rem 1rem;
       margin: 0 0.5rem;
   }

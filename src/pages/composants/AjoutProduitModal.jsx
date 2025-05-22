@@ -18,11 +18,15 @@ export default function AjoutProduitModal({ showNotification, setProduits, categ
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      // Convertir la date ISO (2026-06-21) en dd-MM-yyyy (21-06-2026)
+      const [year, month, day] = formData.dateExpiration.split('-');
+      const formattedDate = `${day}-${month}-${year}`;
+
       const produitDTO = {
         produit: formData.produit,
         prix: parseFloat(formData.prix),
         categorie: formData.categorie,
-        dateExpiration: formData.dateExpiration,
+        dateExpiration: formattedDate,
         unite: formData.unite,
         fournisseur: formData.fournisseur,
         description: formData.description,
