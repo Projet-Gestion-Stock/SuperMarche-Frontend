@@ -5,7 +5,7 @@ import { useAuth } from '@/contexts/AuthContext';
 import { FiUser, FiLock, FiLogIn } from 'react-icons/fi';
 import api from '@/services/api'; // Import manquant
 import '@/styles/ConnexionPage.css';
-import logo from '@/assets/logo.png';
+import logo from '@/assets/logo2.png';
 
 function ConnexionPage() {
   const [credentials, setCredentials] = useState({ 

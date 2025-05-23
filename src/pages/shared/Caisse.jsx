@@ -74,7 +74,7 @@ const CaissePage = () => {
 
   // Fonction pour des calculs monétaires précis
   const preciseCalculation = (a, b) => {
-    return (Math.round(a * 100) - Math.round(b * 100)) / 100;
+    return (Math.round(a * 1000) - Math.round(b * 1000)) / 1000;
   };
 
   // Fonction pour formater correctement les montants
